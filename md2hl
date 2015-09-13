@@ -1,0 +1,10 @@
+#!/bin/bash
+#Date: 2015-09-13
+#Author: YtRen <rytubuntulinux@gmail.com>
+#Function:This shell script can make browser show Chinese correctly and convert markdown to
+# html conveniently.
+#Usage: 
+# $ chmod u+x md2hl
+# $ ./md2hl markdown_text html_text.html
+sed -i '5,$ d' ${2}
+markdown ${1} >> ${2}
