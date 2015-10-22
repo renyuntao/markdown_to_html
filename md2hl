@@ -1,15 +1,10 @@
 #!/bin/bash
 #Date: 2015-09-13
-#Update: 2015-09-14
+#Last Update: 2015-10-22
 #Author: YtRen <rytubuntulinux@gmail.com>
 #Function:This shell script can make browser show Chinese correctly and convert markdown to
 # html conveniently.
-#Usage: 
-# $ chmod u+x md2hl
-# $ sudo mv -v md2hl /usr/bin/
-# $ md2hl2hl markdown_text
-# then in your current directory will create a file named html_text.html which contain the html format text 
-# that convert by your markdown text.
+#Usage: md markdown_text html_text.html
 if [ ! -e "html_text.html" ]
 then
 	echo '<?xml version="1.0" encoding="utf-8"?>
@@ -20,3 +15,5 @@ fi
 sed -i '5,$ d' html_text.html
 markdown ${1} >> html_text.html
 sed -i '/^$/ d' html_text.html
+sed -i 's@<p>@@' html_text.html
+sed -i 's@</p>@@' html_text.html
