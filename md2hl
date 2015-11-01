@@ -1,10 +1,10 @@
 #!/bin/bash
 #Date: 2015-09-13
-#Last Update: 2015-10-22
+#Last Update: 2015-11-01
 #Author: YtRen <rytubuntulinux@gmail.com>
 #Function:This shell script can make browser show Chinese correctly and convert markdown to
 # html conveniently.
-#Usage: md markdown_text html_text.html
+#Usage: ./md2hl markdown_text 
 if [ ! -e "html_text.html" ]
 then
 	echo '<?xml version="1.0" encoding="utf-8"?>
@@ -17,3 +17,6 @@ markdown ${1} >> html_text.html
 sed -i '/^$/ d' html_text.html
 sed -i 's@<p>@@' html_text.html
 sed -i 's@</p>@@' html_text.html
+sed -i '$ a\
+<br />一如既往，如果你对文章中的内容有任何疑问，或者是发现文章中有任何错误,都可以通过下面的地址发邮件告诉我. <br />\
+E-mail: rytubuntulinux@gmail.com <br /><br />' html_text.html
