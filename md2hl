@@ -17,6 +17,8 @@ markdown ${1} >> html_text.html
 sed -i '/^$/ d' html_text.html
 sed -i 's@<p>@@' html_text.html
 sed -i 's@</p>@@' html_text.html
+sed -i '5a\
+<div class="content" style="margin-left:5px;margin-right:5px;">' html_text.html
 sed -i '$ a\
-<br />一如既往，如果你对文章中的内容有任何疑问，或者是发现文章中有任何错误,都可以通过下面的地址发邮件告诉我. <br />\
-E-mail: rytubuntulinux@gmail.com <br /><br />' html_text.html
+<br /><font class="end">一如既往，如果你对文章中的内容有任何疑问，或者是发现文章中有任何错误,都可以通过下面的地址发邮件告诉我. <br />\
+E-mail: rytubuntulinux@gmail.com <br /><br /></font></div>' html_text.html
