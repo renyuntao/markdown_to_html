@@ -17,8 +17,6 @@ markdown ${1} >> html_text.html
 sed -i '/^$/ d' html_text.html
 sed -i 's@<p>@@' html_text.html
 sed -i 's@</p>@@' html_text.html
-sed -i 's@<pre>@<pre style="background-color:white;">@' html_text.html
-sed -i 's@<code>@<code class="language-cpp" style="background-color:white">@' html_text.html
 sed -i '5a\
 <div class="content" style="margin-left:5px;margin-right:5px;">' html_text.html
 sed -i '$ a\
