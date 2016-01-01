@@ -22,4 +22,4 @@ sed -i '5a\
 <div class="content" style="margin-left:5px;margin-right:5px;">' html_text.html
 sed -i '$ a\
 <br /><br /><font class="end">一如既往，如果你对文章中的内容有任何疑问，或者是发现文章中有任何错误,都可以通过下面的地址发邮件告诉我. <br />\
-E-mail: rytubuntulinux@gmail.com <br /><br /></font></div>' html_text.html
+E-mail: <a style="color:red;text-decoration:none;" href="mailto:rytubuntulinux@gmail.com" target="_blank">rytubuntulinux@gmail.com</a> <br /><br /></font></div>' html_text.html
