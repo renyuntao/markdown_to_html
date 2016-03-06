@@ -1,0 +1,24 @@
+#!/bin/bash
+# Date: 2016-03-06
+# Author: YtRen <rytubuntulinux@gmail.com>
+# Improve the html text convert by Minimalist Markdown Editor
+#Usage: ./md2hlv3 html_text
+
+sed -i '1 i\
+<?xml version="1.0" encoding="utf-8"?>\
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\
+<html xmlns="http://www.w3.org/1999/xhtml">' $1
+
+sed -i '5a\
+<div class="content" style="margin-left:5px;margin-right:5px;">' $1
+
+sed -i '/^$/ d' $1
+sed -i 's@<p>@@' $1
+sed -i 's@</p>@@' $1
+
+sed -i 's@<pre@<pre style="background-color:#EBEBEB;" @g' $1
+
+sed -i '$ a\
+<br /><br /><font class="end">一如既往，如果你对文章中的内容有任何疑问，或者是发现文章中有任何错误,都可以通过下面的地址发邮件告诉我. <br />\
+E-mail: <a style="color:red;text-decoration:none;" href="mailto:rytubuntulinux@gmail.com" target="_blank">rytubuntulinux@gmail.com</a> <br /><br /></font></div>' $1

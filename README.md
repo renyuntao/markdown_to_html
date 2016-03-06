@@ -1,5 +1,6 @@
 #Description  
-This shell script can make browser show Chinese correctly and convert markdown to html conveniently.  
+This shell script can make browser show Chinese correctly and convert markdown to html conveniently(**For `md2hl` and `md2hlv2`**).       
+For **md2hlv3**, it imporve the html text convert by Minimalist Markdown Editor.           
 #Usage  
 
 ------------
@@ -12,6 +13,11 @@ This shell script can make browser show Chinese correctly and convert markdown t
 **`$ chmod u+x md2hlv2`**      
 **` $ sudo mv -v md2hlv2 /usr/bin/`**    
 **`$ md2hlv2 markdown_text`**     
+
+## Version #3
+**`$ chmod u+x md2hlv3`**               
+**` $ sudo mv -v md2hlv3 /usr/bin/`**               
+**`$ md2hlv2 html_text`**                 
 
 ------------
 
